@@ -1,0 +1,12 @@
+{
+  "editor.formatOnType": false,
+  "editor.fontWeight": "normal",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+  },
+  "files.associations": {
+    "string.h": "c"
+  }
+}
