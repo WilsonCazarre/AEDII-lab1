@@ -6,7 +6,25 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 4,
   },
+  "[java]": {
+    "editor.defaultFormatter": "mwpb.java-prettier-formatter",
+  },
   "files.associations": {
     "string.h": "c"
-  }
+  },
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-pdflatex=pdflatex -shell-escape %O %S",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    }
+  ]
 }

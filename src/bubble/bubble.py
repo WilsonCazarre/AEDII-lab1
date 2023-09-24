@@ -1,14 +1,34 @@
-my_list = [8, 2, 9, 6, 4, 5, 9]
+import time
 
 
-def bubble(unsorted: list):
-    for i in range(len(unsorted)):
-        for j in range(len(unsorted) - i - 1):
-            if unsorted[j] > unsorted[j + 1]:
-                current_item = unsorted[j]
-                unsorted[j] = unsorted[j + 1]
-                unsorted[j + 1] = current_item
-    return unsorted
+def swap(vet, i):
+    aux = vet[i]
+    vet[i] = vet[i + 1]
+    vet[i + 1] = aux
 
 
-print(bubble(my_list))
+def bubbleSort(vet, n):
+    for i in range(n - 1, 0, -1):
+        for j in range(i):
+            if vet[j + 1] < vet[j]:
+                swap(vet, j)
+    return vet
+
+
+arquivo = open("arquivo.txt", "r")
+# armazenar os dados do arquivo em int
+dadosInt = []
+
+for linha in arquivo:
+    teste = int(linha)
+    dadosInt.append(teste)
+
+tam = len(dadosInt)
+inicio = time.time()
+vet = bubbleSort(dadosInt, tam)
+print(vet)
+fim = time.time()
+
+print(fim - inicio)
+
+arquivo.close()
