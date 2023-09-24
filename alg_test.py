@@ -22,6 +22,14 @@ scenary_b_files = [
 ]
 scenary_b_lengths = [1000, 10000, 25000, 50681]
 
+scenary_c_files = [
+    "arquivo1000-parcial.csv",
+    "arquivo10000-parcial.csv",
+    "arquivo25000-parcial.csv",
+    "arquivo50684-parcial.csv",
+]
+scenary_c_lengths = [1000, 10000, 25000, 50684]
+
 
 def generate_args(algoritm: str, language: str, case_filename: str):
     arguments = {
@@ -54,7 +62,7 @@ for algoritm in test_cases:
             f"--------------{algoritm.capitalize()} sort Iteração {iteration}--------------"
         )
         for language in test_cases[algoritm]:
-            for test_case_file, length in zip(scenary_b_files, scenary_b_lengths):
+            for test_case_file, length in zip(scenary_c_files, scenary_c_lengths):
                 output = subprocess.check_output(
                     generate_args(algoritm, language, test_case_file),
                     shell=True,
