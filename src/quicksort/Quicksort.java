@@ -50,20 +50,13 @@ public class Quicksort {
 
   public static void main(String[] args) {
     try {
-      int sortArray[] = readArrayFromFile("../../data/testcase.txt");
+      int sortArray[] = readArrayFromFile(args[0]);
       int length = sortArray.length;
 
       final long startTime = System.currentTimeMillis();
       quickSort(sortArray, 0, sortArray.length - 1);
       final long endTime = System.currentTimeMillis();
-      System.out.println(Arrays.toString(sortArray));
-      System.out.println(
-        String.format(
-          "Sorted %d objects in %d ms.\n",
-          length,
-          endTime - startTime
-        )
-      );
+      System.out.println(endTime - startTime);
     } catch (Exception e) {
       System.out.println(e.getMessage());
     }

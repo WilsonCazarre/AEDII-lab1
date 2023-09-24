@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
+#include <sys/timeb.h>
 
 void countingsort(int *vet, int *B, int N) {
   int i, j;
@@ -32,13 +32,13 @@ void countingsort(int *vet, int *B, int N) {
   }
 }
 
-int main() {
-  time_t inicio, fim;
-  inicio = time(NULL);
+int main(int argc, char *argv[]) {
+  struct timeb inicio, fim;
+
   int *vet;
 
   FILE *arquivo;
-  arquivo = fopen("arquivo.csv", "r");
+  arquivo = fopen(argv[1], "r");
   int i = 0;
   int ch = 0;
   int linhas = 0;
@@ -66,7 +66,10 @@ int main() {
 
   arquivo = fopen("arquivo_ordenado.csv", "w+");
 
+  ftime(&inicio);
   countingsort(vet, B, linhas);
+  ftime(&fim);
+
   for (i = 0; i < linhas; i++) {
     fprintf(arquivo, "%d\n", vet[i]);
   }
@@ -74,10 +77,10 @@ int main() {
   fclose(arquivo);
 
   free(vet);
-  // free(B);
+  int diff =
+      (int)(1000.0 * (fim.time - inicio.time) + (fim.millitm - inicio.millitm));
 
-  fim = time(NULL);
-  printf("Tempo em segundos %lf\n\n", difftime(fim, inicio));
+  printf("%d", diff);
 
   return 0;
 }

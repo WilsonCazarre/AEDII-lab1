@@ -1,0 +1,105 @@
+--------------Quicksort sort Iteração 0--------------
+[c] 1000 inteiros ordenados em 1ms
+[c] 10000 inteiros ordenados em 13ms
+[c] 25000 inteiros ordenados em 46ms
+[c] 50684 inteiros ordenados em 309ms
+[java] 1000 inteiros ordenados em 1ms
+[java] 10000 inteiros ordenados em 5ms
+[java] 25000 inteiros ordenados em 12ms
+[java] 50684 inteiros ordenados em 65ms
+--------------Quicksort sort Iteração 1--------------
+[c] 1000 inteiros ordenados em 0ms
+[c] 10000 inteiros ordenados em 13ms
+[c] 25000 inteiros ordenados em 50ms
+[c] 50684 inteiros ordenados em 304ms
+[java] 1000 inteiros ordenados em 0ms
+[java] 10000 inteiros ordenados em 5ms
+[java] 25000 inteiros ordenados em 10ms
+[java] 50684 inteiros ordenados em 65ms
+--------------Quicksort sort Iteração 2--------------
+[c] 1000 inteiros ordenados em 0ms
+[c] 10000 inteiros ordenados em 12ms
+[c] 25000 inteiros ordenados em 46ms
+[c] 50684 inteiros ordenados em 302ms
+[java] 1000 inteiros ordenados em 1ms
+[java] 10000 inteiros ordenados em 5ms
+[java] 25000 inteiros ordenados em 12ms
+[java] 50684 inteiros ordenados em 71ms
+--------------Bubble sort Iteração 0--------------
+[c] 1000 inteiros ordenados em 2ms
+[c] 10000 inteiros ordenados em 253ms
+[c] 25000 inteiros ordenados em 1092ms
+[c] 50684 inteiros ordenados em 7254ms
+[java] 1000 inteiros ordenados em 4ms
+[java] 10000 inteiros ordenados em 114ms
+[java] 25000 inteiros ordenados em 506ms
+[java] 50684 inteiros ordenados em 3489ms
+[python] 1000 inteiros ordenados em 67ms
+[python] 10000 inteiros ordenados em 7200ms
+[python] 25000 inteiros ordenados em 30690ms
+[python] 50684 inteiros ordenados em 190742ms
+--------------Bubble sort Iteração 1--------------
+[c] 1000 inteiros ordenados em 2ms
+[c] 10000 inteiros ordenados em 255ms
+[c] 25000 inteiros ordenados em 1079ms
+[c] 50684 inteiros ordenados em 7243ms
+[java] 1000 inteiros ordenados em 4ms
+[java] 10000 inteiros ordenados em 108ms
+[java] 25000 inteiros ordenados em 501ms
+[java] 50684 inteiros ordenados em 3425ms
+[python] 1000 inteiros ordenados em 69ms
+[python] 10000 inteiros ordenados em 7353ms
+[python] 25000 inteiros ordenados em 30145ms
+[python] 50684 inteiros ordenados em 189598ms
+--------------Bubble sort Iteração 2--------------
+[c] 1000 inteiros ordenados em 2ms
+[c] 10000 inteiros ordenados em 251ms
+[c] 25000 inteiros ordenados em 1082ms
+[c] 50684 inteiros ordenados em 7270ms
+[java] 1000 inteiros ordenados em 4ms
+[java] 10000 inteiros ordenados em 106ms
+[java] 25000 inteiros ordenados em 500ms
+[java] 50684 inteiros ordenados em 3452ms
+[python] 1000 inteiros ordenados em 67ms
+[python] 10000 inteiros ordenados em 7260ms
+[python] 25000 inteiros ordenados em 30466ms
+[python] 50684 inteiros ordenados em 192008ms
+--------------Counting sort Iteração 0--------------
+[c] 1000 inteiros ordenados em 0ms
+[c] 10000 inteiros ordenados em 0ms
+[c] 25000 inteiros ordenados em 0ms
+[c] 50684 inteiros ordenados em 1ms
+[java] 1000 inteiros ordenados em 0ms
+[java] 10000 inteiros ordenados em 0ms
+[java] 25000 inteiros ordenados em 0ms
+[java] 50684 inteiros ordenados em 2ms
+[python] 1000 inteiros ordenados em 0ms
+[python] 10000 inteiros ordenados em 1ms
+[python] 25000 inteiros ordenados em 4ms
+[python] 50684 inteiros ordenados em 10ms
+--------------Counting sort Iteração 1--------------
+[c] 1000 inteiros ordenados em 0ms
+[c] 10000 inteiros ordenados em 1ms
+[c] 25000 inteiros ordenados em 0ms
+[c] 50684 inteiros ordenados em 1ms
+[java] 1000 inteiros ordenados em 0ms
+[java] 10000 inteiros ordenados em 1ms
+[java] 25000 inteiros ordenados em 1ms
+[java] 50684 inteiros ordenados em 2ms
+[python] 1000 inteiros ordenados em 0ms
+[python] 10000 inteiros ordenados em 1ms
+[python] 25000 inteiros ordenados em 4ms
+[python] 50684 inteiros ordenados em 26ms
+--------------Counting sort Iteração 2--------------
+[c] 1000 inteiros ordenados em 0ms
+[c] 10000 inteiros ordenados em 0ms
+[c] 25000 inteiros ordenados em 0ms
+[c] 50684 inteiros ordenados em 1ms
+[java] 1000 inteiros ordenados em 0ms
+[java] 10000 inteiros ordenados em 1ms
+[java] 25000 inteiros ordenados em 1ms
+[java] 50684 inteiros ordenados em 3ms
+[python] 1000 inteiros ordenados em 0ms
+[python] 10000 inteiros ordenados em 1ms
+[python] 25000 inteiros ordenados em 4ms
+[python] 50684 inteiros ordenados em 10ms

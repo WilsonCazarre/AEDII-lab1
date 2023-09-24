@@ -1,4 +1,5 @@
 import time
+import sys
 
 
 def swap(vet, i):
@@ -15,20 +16,25 @@ def bubbleSort(vet, n):
     return vet
 
 
-arquivo = open("arquivo.txt", "r")
+arquivo = open(sys.argv[1], "r")
 # armazenar os dados do arquivo em int
 dadosInt = []
 
+line_number = 1
+
 for linha in arquivo:
-    teste = int(linha)
-    dadosInt.append(teste)
+    try:
+        teste = int(linha)
+        dadosInt.append(teste)
+        line_number += 1
+    except ValueError as e:
+        print(f"Line number: {line_number}")
+        raise e
 
 tam = len(dadosInt)
-inicio = time.time()
+inicio = time.time() * 1000
 vet = bubbleSort(dadosInt, tam)
-print(vet)
-fim = time.time()
-
-print(fim - inicio)
+fim = time.time() * 1000
+print(int(fim - inicio))
 
 arquivo.close()

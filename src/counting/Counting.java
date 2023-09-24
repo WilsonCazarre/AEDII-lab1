@@ -65,20 +65,14 @@ public class Counting {
 
   public static void main(String[] args) {
     try {
-      int sortArray[] = readArrayFromFile("../../data/testcase.txt");
+      int sortArray[] = readArrayFromFile(args[0]);
       int length = sortArray.length;
 
       final long startTime = System.currentTimeMillis();
       int sortedArray[] = countingSort(sortArray);
       final long endTime = System.currentTimeMillis();
 
-      System.out.println(
-        String.format(
-          "Sorted %d objects in %d ms.\n",
-          length,
-          endTime - startTime
-        )
-      );
+      System.out.println(endTime - startTime);
     } catch (Exception e) {
       System.out.println(e.getMessage());
     }

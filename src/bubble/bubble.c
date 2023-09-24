@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <sys\timeb.h>
 
 void swap(int *v, int i) {
   int aux;
@@ -21,17 +21,18 @@ void bubble(int *vet, int linhas) {
   }
 }
 
-int main() {
-  time_t inicio, fim;
-  inicio = time(NULL);
+int main(int argc, char *argv[]) {
+  struct timeb start, end;
+
   int *vet;
   FILE *arquivo;
-  arquivo = fopen("arquivo.csv", "r");
+  arquivo = fopen(argv[1], "r");
   int i = 0;
   int ch = 0;
   int linhas = 0;
 
   if (arquivo == NULL) {
+    printf("File not found %s\n", argv[1]);
     return 1;
   } else {
     // Efetua a contagem de linhas lendo o arquivo e procurando a quebra de
@@ -51,9 +52,13 @@ int main() {
 
   fclose(arquivo);
 
-  arquivo = fopen("arquivo_ordenado.csv", "w+");
-
+  ftime(&start);
   bubble(vet, linhas);
+  ftime(&end);
+  int diff =
+      (int)(1000.0 * (end.time - start.time) + (end.millitm - start.millitm));
+
+  arquivo = fopen("arquivo_ordenado.csv", "w+");
 
   for (i = 0; i < linhas; i++) {
     fprintf(arquivo, "%d\n", vet[i]);
@@ -63,8 +68,7 @@ int main() {
 
   free(vet);
 
-  fim = time(NULL);
-  printf("Tempo em segundos %lf\n\n", difftime(fim, inicio));
+  printf("%u\n", diff);
 
   return 0;
 }

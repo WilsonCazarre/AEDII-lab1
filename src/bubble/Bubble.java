@@ -33,22 +33,15 @@ public class Bubble {
     }
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
     try {
-      int sortArray[] = readArrayFromFile("testcase.txt");
-      int length = sortArray.length;
+      int sortArray[] = readArrayFromFile(args[0]);
       final long startTime = System.currentTimeMillis();
       bubbleSort(sortArray);
       final long endTime = System.currentTimeMillis();
-      System.out.println(
-        String.format(
-          "Sorted %d objects in %d ms.\n",
-          length,
-          endTime - startTime
-        )
-      );
+      System.out.println(endTime - startTime);
     } catch (Exception e) {
-      System.out.println(e.getMessage());
+      throw e;
     }
   }
 }

@@ -1,30 +1,21 @@
 import time
+import sys
+
+# sys.setrecursionlimit(5000)
 
 
-def particiona(vet, inicio, final):
-    x = vet[final]
-    i = inicio - 1
-    for j in range(inicio, final):
-        if vet[j] <= x:
-            i = i + 1
-            aux = vet[i]
-            vet[i] = vet[j]
-            vet[j] = aux
-    aux = vet[i + 1]
-    vet[i + 1] = vet[final]
-    vet[final] = aux
-    return i + 1
+def quick_sort(original_list: "list[int]"):
+    if len(original_list) == 0:
+        return original_list
+
+    pivot = original_list[len(original_list) // 2]
+    less_than_pivot = [value for value in original_list if value < pivot]
+    greater_than_pivot = [value for value in original_list if value > pivot]
+    eq_to_pivot = [value for value in original_list if value == pivot]
+    return quick_sort(less_than_pivot) + eq_to_pivot + quick_sort(greater_than_pivot)
 
 
-def quickSort(vet, inicio, fim):
-    if fim > inicio:
-        pivo = particiona(vet, inicio, fim)
-        quickSort(vet, inicio, pivo - 1)
-        quickSort(vet, pivo + 1, fim)
-    return vet
-
-
-arquivo = open("teste.txt", "r")
+arquivo = open(sys.argv[1], "r")
 # armazenar os dados do arquivo em int
 dadosInt = []
 
@@ -32,13 +23,9 @@ for linha in arquivo:
     teste = int(linha)
     dadosInt.append(teste)
 
-tam = len(dadosInt)
-
-inicio = time.time()
-vet = quickSort(dadosInt, 0, tam - 1)
-print(vet)
-fim = time.time()
-
-print(fim - inicio)
-
 arquivo.close()
+inicio = time.time() * 1000
+vet = quick_sort(dadosInt)
+fim = time.time() * 1000
+
+print(int(fim - inicio))
